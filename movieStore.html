@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>                                                                                                        
+   <script>
+    //const express = require('express');
+    //const bodyParser = require('body-parser');
+
+class MovieStore {
+  constructor() {
+    this.movies = [
+      { id: 1, title: 'Gifted', rented: false },
+      { id: 2, title: 'Age of adaline', rented: false },
+      { id: 3, title: 'Cursed', rented: false },
+    ];
+  }
+
+  getAllMovies() {
+    return this.movies;
+  }
+
+  getMovieById(id) {
+    return this.movies.find(movie => movie.id === id);
+  }
+
+  rentMovie(id) {
+    const movie = this.getMovieById(id);
+    if (movie && !movie.rented) {
+      movie.rented = true;
+      return true;
+    }
+    return false;
+  }
+
+}
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
